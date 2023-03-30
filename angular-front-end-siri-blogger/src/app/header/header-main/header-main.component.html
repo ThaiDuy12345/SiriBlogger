@@ -1,0 +1,38 @@
+<div class="fixed-top header w-100 text-dark m-0 p-0 row">
+  <div class="col-4 row p-0 m-0">
+    <div class="col-6 p-0 m-0 center" style="font-size:25px; font-weight:bold">SiriBlogger</div>
+    <div class="col-6 p-0 m-0 row">
+      <div class="col p-0 m-0 center"><fa-icon [icon]="faFacebook"/></div>
+      <div class="col p-0 m-0 center"><fa-icon [icon]="faTwitter"/></div>
+      <div class="col p-0 m-0 center"><fa-icon [icon]="faYoutube"/></div>
+      <div class="col p-0 m-0 center"><fa-icon [icon]="faPaypal"/></div>
+      <div class="col p-0 m-0 center"><a href="#searchBar" class="text-dark" ><fa-icon [icon]="faMagnifyingGlass" /></a> </div>
+    </div>
+  </div>
+  <div *ngIf="checkIfLogin()" class="col-8 row p-0 m-0">
+    <div class="col-7 row m-0 p-0">
+
+    </div>
+    <div class="col-5 row">
+      <button routerLink="/signin" routerLinkActive="active" class="col-5 m-auto text-dark" style="border:none; background:none">Đăng ký</button>
+      <button routerLink="/login" routerLinkActive="active" class="btn btn-primary m-auto col-5">Đăng nhập</button>
+    </div>
+  </div>
+  <div *ngIf="checkIfLogin()===false" class="col-8 row p-0 m-0">
+    <div class="col-10 row m-0 p-0">
+
+    </div>
+    <div class="col-2 row">
+      <div class="dropdown col-12">
+        <button type="button" style="background: none; border:none" class="center text-dark btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img [src]="acc.avatar" class="float-start" style="width:70px;border-radius:100px 100px 100px 100px" alt="...">
+        </button>
+        <ul class="dropdown-menu">
+          <li><button class="dropdown-item" type="button">Trang cá nhân</button></li>
+          <li><button class="dropdown-item" type="button">Cài đặt</button></li>
+          <li><button class="dropdown-item text-danger" (click)="logOut()" type="button">Đăng xuất</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+@import "./body/body-login/body-login.component.scss";
+@import "./body/body-signin/body-signin.component.scss";
+@import "./body/body-login/body-login.component.scss";
+@import "./header/header-main/header-main.component.scss";
+@import "./footer/footer-main/footer-main.component.scss";
+
+$base-color: white;
+$body-color: rgb(239, 239, 239);
+$font-family: 'Roboto', sans-serif;
+
+.center{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+
+html, body{
+  font-family: $font-family;
+  ::-webkit-scrollbar{
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track{
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius:50px;
+    background: #888;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background: #555;
+  }
+
+
+}

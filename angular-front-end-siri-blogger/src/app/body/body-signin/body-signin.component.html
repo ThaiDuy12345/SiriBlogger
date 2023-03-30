@@ -1,0 +1,108 @@
+<div class="Signin w-50 m-auto center" style="height: 100vh">
+  <div class="row m-0 p-0">
+    <div class="col-12 row m-0 mb-4 p-0">
+      <b class="col m-auto center" style="font-size:30px">
+        SiriBlogger
+      </b>
+    </div>
+    <ng-container *ngIf="step === 0">
+      <div class="col-12 row m-0 mb-4 p-0">
+        <input class="form-control col-12 m-auto mb-2" type="text" placeholder="Tên đăng nhập hoặc email"
+          [(ngModel)]="acc.email" />
+        <input class="form-control col-12 m-auto mb-2" type="password" placeholder="Mật khẩu"
+          [(ngModel)]="acc.password" />
+      </div>
+      <div class="col-12 row m-0 mb-4 p-0">
+        <button (click)="checkValidate()" class="bg-primary text-light pt-2 pb-2 rounded col-12 fw-bold"
+          style="border:none; background: none">
+          Tiếp tục
+        </button>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="step === 1">
+      <div class="col-12 row m-0 mb-4 p-0">
+        <div class="text-start col-12 m-auto mb-1 text-secondary fw-bold">
+          Thông tin đăng nhập
+        </div>
+        <input disabled class="form-control col-12 m-auto mb-2" type="text" placeholder="Tên đăng nhập hoặc email"
+          [(ngModel)]="acc.email" />
+        <input disabled class="form-control col-12 m-auto mb-2" type="password" placeholder="Mật khẩu"
+          [(ngModel)]="acc.password" />
+      </div>
+      <div class="col-12 row m-0 mb-4 p-0">
+        <div class="text-start col-12 m-auto mb-1 text-secondary fw-bold">
+          Thông tin chi tiết
+        </div>
+        <input class="form-control m-auto mb-2" type="text" placeholder="Họ tên đầy đủ của bạn"
+          [(ngModel)]="acc.name" />
+        <input class="form-control m-auto mb-2" minLength="10" maxLength="11" type="number" placeholder="Số điện thoại"
+          [(ngModel)]="acc.phone" />
+        <div class="col-5 p-0 me-auto mb-2">
+          <select class="form-select text-secondary" aria-label=".form-select-sm example" [(ngModel)]="acc.gender">
+            <option value="1">Nam</option>
+            <option value="2">Nữ</option>
+            <option value="3">Khác</option>
+          </select>
+        </div>
+        <div class="col-5 p-0 ms-auto mb-2">
+          <input name="date of birth" class="form-control text-secondary" type="date" placeholder="Ngày sinh"
+            [(ngModel)]="acc.dateOfBirth" />
+        </div>
+      </div>
+      <div class="col-12 row m-0 mb-4 p-0">
+        <button (click)="checkValidate()" class="bg-primary text-light pt-2 pb-2 rounded col-12 fw-bold"
+          style="border: none; background: none">
+          Tiếp tục
+        </button>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="step === 2">
+      <div class="col-4 row m-0 me-auto p-0">
+        <div [ngStyle]="imgSrc" alt="" class="avatar col-12 mt-2 rounded"></div>
+        <input (change)="loadImage($event)" class="mb-auto mt-1 form-control" type="file" />
+      </div>
+      <div class="row col-6 m-0 ms-auto p-0">
+        <div class="col-12 row m-0 mb-4 p-0">
+          <div class="text-start col-12 m-auto mb-1 text-secondary fw-bold">
+            Thông tin đăng nhập
+          </div>
+          <input disabled class="form-control col-12 m-auto mb-2" type="text" placeholder="Tên đăng nhập hoặc email"
+            [(ngModel)]="acc.email" />
+          <input disabled class="form-control col-12 m-auto mb-2" type="password" placeholder="Mật khẩu"
+            [(ngModel)]="acc.password" />
+        </div>
+        <div class="col-12 row m-0 mb-4 p-0">
+          <div class="text-start col-12 m-auto mb-1 text-secondary fw-bold">
+            Thông tin chi tiết
+          </div>
+          <input disabled name="name" class="form-control m-auto mb-2" type="text" placeholder="Họ tên đầy đủ của bạn"
+            [(ngModel)]="acc.name" />
+          <input disabled name="phone" class="form-control m-auto mb-2" type="number" placeholder="Số điện thoại"
+            [(ngModel)]="acc.phone" />
+          <div class="col-5 p-0 me-auto mb-2">
+            <select name="gender" disabled class="form-select text-secondary" aria-label=".form-select-sm example"
+              [(ngModel)]="acc.gender">
+              <option value="0">Giới tính</option>
+              <option value="1">Nam</option>
+              <option value="2">Nữ</option>
+              <option value="3">Khác</option>
+            </select>
+          </div>
+          <div class="col-5 p-0 ms-auto mb-2">
+            <input disabled name="date of birth" class="form-control text-secondary" type="date" placeholder="Ngày sinh"
+              [(ngModel)]="acc.dateOfBirth" />
+          </div>
+        </div>
+        <div class="col-12 row m-0 mb-4 p-0">
+          <div class="col-6 m-0"></div>
+          <div class="col-6 p-0 m-0">
+            <button (click)="checkValidate()" class="text-primary fw-bold" style="border: none; background: none">
+              Đăng ký
+            </button>
+            <fa-icon [icon]="faRightLong" class="text-primary" />
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+
+<div class="Login w-50 m-auto center" style="height: '100vh'">
+  <div class="row m-0 p-0">
+    <div class="col-12 row m-0 mb-4 p-0">
+      <b class="col m-auto center" style="font-size:'30px'">SiriBlogger</b>
+    </div>
+    <div class="col-12 row m-0 mb-4 p-0">
+      <input [(ngModel)]="email" class="form-control col-8 m-auto mb-2" type="text" placeholder="Email"/>
+      <input [(ngModel)]="password" class="form-control col-8 m-auto mb-2" type="password" placeholder="Mật khẩu"/>
+    </div>
+    <div class="col-12 row m-0 mb-4 p-0">
+      <button (click)="submit()" class="btn btn-success col-12 m-auto font-weight-bold">Đăng nhập</button>
+    </div>
+    <div class="col-12 row m-0 mb-4 p-0">
+      <a class="text-primary col-6 m-auto" style="text-align:'left'">Quên mật khẩu</a><a routerLink="/signin" class="col-6 m-auto text-primary" style="text-align:'right'">Chưa có tài khoản? Đăng ký ngay</a>
+    </div>
+  </div>
+</div>

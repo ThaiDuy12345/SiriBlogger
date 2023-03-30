@@ -1,0 +1,11 @@
+@import 'variables.scss';
+.header{
+    min-height:70px;
+    background-color: $base-color;
+    box-shadow: 0px 10px 10px rgb(242, 242, 242);
+    input{
+        &:focus{
+            outline:none;
+        }
+    }
+}

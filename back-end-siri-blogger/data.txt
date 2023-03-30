@@ -1,0 +1,46 @@
+const [weeklyPost, setWeeklyPost] = useState([
+        { id:'8f0fde7040ba11edbdb02d263bee44ac', postTitle:'BẠN SẼ LÀ NHÂN VẬT PHẢN DIỆN TRONG CÂU CHUYỆN CỦA NGƯỜI KHÁC', image:'8f0fde7040ba11edbdb02d263bee44ac.png', numberOfViews: 189, category:'Tâm sự', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'8f5117b0406e11ed8bfdbbebc4a1c85d', postTitle:'THÁNH TÔNG DI THẢO (P.8) - BỨC THƯ CỦA CON MUỖI', image:'8f5117b0406e11ed8bfdbbebc4a1c85d.jpg', numberOfViews: 555, category:'Khoa hoạ - viễn tưởng', writter:'Duy Tiến', datePost:'01/10/2022'},
+        { id:'88e63fe0409111ed9dc7e1a6d0776367', postTitle:'Đừng để cơ chế phòng ngự tâm lý làm hại bạn', image:'88e63fe0409111ed9dc7e1a6d0776367.png', numberOfViews: 15, category:'Sáng tạo', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'fde64de0409f11ed9f77e58e183d3527', postTitle:'Quầy bar vắng khách - Phần 1 - Lời chào', image:'fde64de0409f11ed9f77e58e183d3527.png', numberOfViews: 567, category:'Quan điểm - tranh luận', writter:'Duy Tiến', datePost:'01/10/2022'},
+    ])
+    const [monthlyPost, setMonthlyPost] = useState([
+        { id:'71f7a2203a3711edbe2243b360f449e8', postTitle:'"KÉM", "LƯỜI", "DỐT" HAY KHUYẾT TẬT HỌC TẬP?', image:'71f7a2203a3711edbe2243b360f449e8.png', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'123f7d30407711ed8bfdbbebc4a1c85d', postTitle:'Thần số học (Numerology) - trò lừa đảo giả danh khoa học', image:'123f7d30407711ed8bfdbbebc4a1c85d.jpg', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'7879b9703e5c11eda9c46f94ace47194', postTitle:'Shark Tank Việt Nam - Truyền cảm hứng khởi nghiệp hay ảo tưởng', image:'7879b9703e5c11eda9c46f94ace47194.png', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'85229960415b11eda183930a8a0f51b3', postTitle:'Chăm Sóc Bản Thân - Vì Mình và Vì Người', image:'85229960415b11eda183930a8a0f51b3.jpg', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'ea96528041cb11edb5d5a5f7d2081a95', postTitle:'Vài suy nghĩ vụn vặt (13): Sống dễ lắm ... mà cũng khó lắm!', image:'ea96528041cb11edb5d5a5f7d2081a95.jpg', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'da366000412711edbd74a7f1e81e6d77', postTitle:'Đại Dương Đen: Trầm cảm không phải biểu hiện của sự yếu đuối.', image:'da366000412711edbd74a7f1e81e6d77.png', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'deabe25041c611edb5d5a5f7d2081a95', postTitle:'CÁCH HỌC TẬP HIỆU QUẢ', image:'deabe25041c611edb5d5a5f7d2081a95.jpg', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'8466b1e041a711eda183930a8a0f51b3', postTitle:'Nói về sự khác biệt và chuyện "hoa hậu xướng tên quê hương"', image:'8466b1e041a711eda183930a8a0f51b3.jpg', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+    ])
+    const [allPost, setAllPost] = useState([
+        { id:'71f7a2203a3711edbe2243b360f449e8', postTitle:'"KÉM", "LƯỜI", "DỐT" HAY KHUYẾT TẬT HỌC TẬP?', image:'71f7a2203a3711edbe2243b360f449e8.png', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'123f7d30407711ed8bfdbbebc4a1c85d', postTitle:'Thần số học (Numerology) - trò lừa đảo giả danh khoa học', image:'123f7d30407711ed8bfdbbebc4a1c85d.jpg', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'7879b9703e5c11eda9c46f94ace47194', postTitle:'Shark Tank Việt Nam - Truyền cảm hứng khởi nghiệp hay ảo tưởng', image:'7879b9703e5c11eda9c46f94ace47194.png', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'85229960415b11eda183930a8a0f51b3', postTitle:'Chăm Sóc Bản Thân - Vì Mình và Vì Người', image:'85229960415b11eda183930a8a0f51b3.jpg', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'ea96528041cb11edb5d5a5f7d2081a95', postTitle:'Vài suy nghĩ vụn vặt (13): Sống dễ lắm ... mà cũng khó lắm!', image:'ea96528041cb11edb5d5a5f7d2081a95.jpg', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'da366000412711edbd74a7f1e81e6d77', postTitle:'Đại Dương Đen: Trầm cảm không phải biểu hiện của sự yếu đuối.', image:'da366000412711edbd74a7f1e81e6d77.png', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'deabe25041c611edb5d5a5f7d2081a95', postTitle:'CÁCH HỌC TẬP HIỆU QUẢ', image:'deabe25041c611edb5d5a5f7d2081a95.jpg', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+        { id:'8466b1e041a711eda183930a8a0f51b3', postTitle:'Nói về sự khác biệt và chuyện "hoa hậu xướng tên quê hương"', image:'8466b1e041a711eda183930a8a0f51b3.jpg', numberOfViews: 189, category:'Khác', writter:'Thanh Nhã', datePost:'01/10/2022'},
+    ])
+    const [allCategory, setCategory] = useState([
+        { id: '1', name: 'Chính trị - văn hoá' },
+        { id: '2', name: 'Giải trí' },
+        { id: '3', name: 'Nghệ thuật' },
+        { id: '4', name: 'Ẩm thực' },
+        { id: '5', name: 'Nhạc' },
+        { id: '6', name: 'Game' },
+        { id: '7', name: 'Thể thao' },
+        { id: '8', name: 'Khác' }
+    ])
+    const [allPopularCategory, setPopularCategory] = useState([
+        { id: '1', name: 'Chính trị - văn hoá', numberOfPosts: 1300},
+        { id: '2', name: 'Giải trí', numberOfPosts: 600 },
+        { id: '3', name: 'Nghệ thuật', numberOfPosts: 500 },
+        { id: '4', name: 'Ẩm thực', numberOfPosts: 300 },
+        { id: '5', name: 'Nhạc', numberOfPosts: 100 },
+        { id: '6', name: 'Game', numberOfPosts: 90 },
+        { id: '7', name: 'Thể thao', numberOfPosts: 60 },
+        { id: '8', name: 'Khác', numberOfPosts: 3 }
+    ])
