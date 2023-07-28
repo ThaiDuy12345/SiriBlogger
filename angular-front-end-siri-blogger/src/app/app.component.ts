@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  Title = "Đây là project angular đầu tiên của tôi"
+  Title = "Đây là project angular đầu tiên của tôi, hehe"
 }
